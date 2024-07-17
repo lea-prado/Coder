@@ -1,0 +1,215 @@
+html {
+  background: url(images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*imagen de fondo*/
+img.bg {
+  /* Llenar el fondo*/
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Escala responsive */
+  width: 100%;
+  height: auto;
+
+  /* Posicionamiento */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+body {
+  margin: 0;
+}
+/*contenedor de links*/
+.contenedor {
+  display: flex;
+  width: 100%;
+  /* Ocupa todo el ancho de la página */
+  justify-content: space-between;
+  /* Distribuye los elementos con espacio entre ellos */
+  background-color: url("images/background.jpg");
+  padding: 10px 0;
+  /* Añade un espacio alrededor de los elementos */
+}
+
+.contenedor a {
+  padding: .5em .8em;
+  color: rgba(4, 0, 0, 0.5);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+
+}
+/*Efectos en las esquinas*/
+.contenedor a::before,
+.contenedor a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.contenedor a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #d901ff;
+  border-right: 3px solid #d901ff;
+  transform: translate(-100%, 50%);
+}
+
+.contenedor a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #d901ff;
+  border-left: 3px solid #d901ff;
+  transform: translate(100%, -50%)
+}
+
+.contenedor a:hover:before,
+.contenedor a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/* Cambio de color cuando pongo el mouse */
+.contenedor a:hover {
+  color: #6e3da3;
+}
+
+/*Ajustes imagen logo */
+img {
+  width: 5%;
+  height: 5%;
+  position: relative;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+  width: 60%;
+  margin: auto;
+}
+
+/*Titulo tamanio*/
+img.titulo {
+  width: 100%;
+}
+
+/*Estilo para las imagenes de la galeria seccion Noticias*/
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 90;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/*Estilo de imagen y texto seccion sobre mi*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(50 - 80px);
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.content img {
+  width: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+.text-overlay p {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.text-overlay a {
+  display: block;
+  margin-top: 10px;
+  color: #3d93d3;
+  text-decoration: none;
+}
+
+/* Estilos sobre contactos */
+div.contacto {
+  align-items: center;
+  display: flex;
+  justify-items: auto;
+  height: px;
+}
+
+  .btn-flotante {
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+
+	font-weight: bold; /* Fuente en negrita o bold */
+
+	border-radius: 5px; /* Borde del boton */
+	
+	background-color: transparent; /* Color de fondo */
+
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	
+	z-index: 99;
+}
+.btn-flotante:hover {
+	background-color: transparent; /* Color de fondo al pasar el cursor */
+	box-shadow: transparent;
+	transform: translateY(-7px);
+}
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
