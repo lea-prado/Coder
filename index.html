@@ -4,58 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="style.css">
-    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <title>Cabeza Games</title>
 </head>
 
 <body>
-    <!-- Logo -->
-    <img class="img" src="images/logo_png_nuevo2.png" alt="Logo de Cabeza Games">
-    
+
+
+
     <!-- Menú de navegación -->
-    <div class="contenedor">
-        <a href="index.html">Home</a>
-        <a href="vistas/noticias.html">Noticias</a>
-        <a href="vistas/sobremi.html">Sobre mi</a>
-        <a href="vistas/videos.html">Videos</a>
-        <a href="vistas/contacto.html">Contacto</a>
-    </div>
+
+
+    <nav class="contenedor navbar navbar-expand-sm navbar-light bg-light">
+        <!-- Logo -->
+        <img class="img" src="images/logo_png_nuevo2.png" alt="Logo de Cabeza Games">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vistas/noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vistas/sobremi.html">Sobre mi</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vistas/videos.html">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vistas/contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item dropdown">
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="vistas/noticias.html">Noticias</a>
+                        <a class="dropdown-item" href="vistas/sobremi.html">Sobre mi</a>
+                        <a class="dropdown-item" href="vistas/videos.html">Videos</a>
+                        <a class="dropdown-item" href="vistas/contacto.html">Contacto</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Título -->
     <img class="titulo" src="../images/Title.png" alt="Título Cabeza Games">
 
     <!-- Galería de imágenes -->
-    <div class="gallery">
-        <a target="_blank" href="images/instagra-captura.png">
-            <img src="images/instagra-captura.png" alt="Mi Instagram">
-        </a>
-        <div class="desc">Mi Instagram</div>
+    <div class="index">
+        <div class="gallery">
+            <a target="_blank" href="images/instagra-captura.png">
+                <img src="images/instagra-captura.png" alt="Mi Instagram">
+            </a>
+            <div class="desc">Mi Instagram</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="images/pantalla-twitch.png">
+                <img src="images/pantalla-twitch.png" alt="Mi canal de Twitch">
+            </a>
+            <div class="desc">Mi canal de Twitch</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="images/canal-youtube.png">
+                <img src="images/canal-youtube.png" alt="Mi canal de YouTube">
+            </a>
+            <div class="desc">Mi canal de YouTube</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="images/canal-youtube.png">
+                <img src="images/canal-youtube.png" alt="Mi canal de YouTube">
+            </a>
+            <div class="desc">Mi canal de YouTube</div>
+        </div>
     </div>
 
-    <div class="gallery">
-        <a target="_blank" href="images/pantalla-twitch.png">
-            <img src="images/pantalla-twitch.png" alt="Mi canal de Twitch">
-        </a>
-        <div class="desc">Mi canal de Twitch</div>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="images/canal-youtube.png">
-            <img src="images/canal-youtube.png" alt="Mi canal de YouTube">
-        </a>
-        <div class="desc">Mi canal de YouTube</div>
-    </div>
 </body>
 
 <!-- Footer con iconos sociales -->
 <footer>
     <div class="social-icons">
-
-        <img class="btn-flotante" src="https://img.icons8.com/color/48/000000/twitch--v1.png" alt="Twitch">
+        <a href="#"><img src="https://img.icons8.com/color/48/000000/twitch--v1.png" alt="Twitch"></a>
         <a href="#"><img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube"></a>
         <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
         <a href="#"><img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="Discord"></a>

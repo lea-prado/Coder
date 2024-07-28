@@ -5,6 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
 /*imagen de fondo*/
 img.bg {
   /* Llenar el fondo*/
@@ -24,16 +25,40 @@ img.bg {
 body {
   margin: 0;
 }
+
+/* Asegurarse de que el navbar y sus elementos ocupen todo el ancho */
+.navbar {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: center; /* Centra los elementos del navbar horizontalmente */
+}
+
+.navbar-nav .nav-item {
+  margin-left: auto;
+  margin-right: auto;
+}
 /*contenedor de links*/
 .contenedor {
   display: flex;
-  width: 100%;
+  width: 100% !important;
   /* Ocupa todo el ancho de la página */
   justify-content: space-between;
   /* Distribuye los elementos con espacio entre ellos */
   background-color: url("images/background.jpg");
   padding: 10px 0;
   /* Añade un espacio alrededor de los elementos */
+
+}
+
+.nav-item {
+  display: flex !important;
+  justify-content: center !important;
+  justify-content: space-between !important;
 }
 
 .contenedor a {
@@ -43,16 +68,17 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 100%;
   text-transform: uppercase;
 
 }
+
 /*Efectos en las esquinas*/
 .contenedor a::before,
 .contenedor a::after {
   content: '';
-  height: 14px;
-  width: 14px;
+  height: 15%;
+  width: 15%;
   position: absolute;
   transition: all .35s ease;
   opacity: 0;
@@ -103,6 +129,52 @@ img {
 /*Titulo tamanio*/
 img.titulo {
   width: 100%;
+}
+
+/* Galeria index.php*/
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Espacio entre los elementos */
+  justify-content: center;
+  /* Centra el contenido */
+}
+
+.gallery {
+  flex: 1 1 calc(33.333% - 20px);
+  /* Tres elementos por fila */
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  margin-top: 10px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .gallery {
+    flex: 1 1 calc(50% - 20px);
+    /* Dos elementos por fila */
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Media query para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .gallery {
+    flex: 1 1 100%;
+    /* Un elemento por fila */
+    max-width: 100%;
+  }
 }
 
 /*Estilo para las imagenes de la galeria seccion Noticias*/
@@ -184,32 +256,49 @@ div.contacto {
   height: px;
 }
 
-  .btn-flotante {
-	font-size: 16px; /* Cambiar el tamaño de la tipografia */
 
-	font-weight: bold; /* Fuente en negrita o bold */
-
-	border-radius: 5px; /* Borde del boton */
-	
-	background-color: transparent; /* Color de fondo */
-
-	position: fixed;
-	bottom: 40px;
-	right: 40px;
-	transition: all 300ms ease 0ms;
-	
-	z-index: 99;
+/* Botones de redes sociales flotantes*/
+.social-icons {
+  position: fixed;
+  right: 20px; /* Ajusta según sea necesario */
+  bottom: 20px; /* Ajusta según sea necesario */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los iconos */
 }
-.btn-flotante:hover {
-	background-color: transparent; /* Color de fondo al pasar el cursor */
-	box-shadow: transparent;
-	transform: translateY(-7px);
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Tamaño de icono más grande */
+  height: 60px; /* Tamaño de icono más grande */
+  border-radius: 50%; /* Hace que los botones sean redondos */
+  background-color: transparent; /* Fondo transparente */
+  box-shadow: none; /* Sin sombra */
+  transition: transform 0.3s ease; /* Transición suave para efectos de hover */
 }
-@media only screen and (max-width: 600px) {
- 	.btn-flotante {
-		font-size: 14px;
-		padding: 12px 20px;
-		bottom: 20px;
-		right: 20px;
-	}
+
+.social-icons a img {
+  width: 100%; /* Asegura que la imagen llene el contenedor */
+  height: 100%; /* Asegura que la imagen llene el contenedor */
+  border-radius: 50%; /* Redondea las imágenes */
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+/* Estilos responsive */
+@media (max-width: 600px) {
+  .social-icons {
+      right: 10px; /* Reduce el margen en pantallas pequeñas */
+      bottom: 10px;
+  }
+
+  .social-icons a {
+      width: 50px; /* Tamaño de icono más pequeño en pantallas pequeñas */
+      height: 50px;
+  }
+
 }
