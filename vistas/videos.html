@@ -2,26 +2,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Videos</title>
-    <h></h>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
+  <title class="titulo">Cabeza Games</title>
 </head>
 
 <body>
-    <img class="img" src="images/logo_png_nuevo2.png">
-    <div class="contenedor">
-        <a href="../index.html">Home</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="sobremi.html">Sobre mi</a>
-        <a href="videos.html">Videos</a>
-        <a href="contacto.html">Contacto</a>
+  <!-- Menú de navegación -->
+  <nav class="contenedor navbar navbar-expand-sm navbar-light bg-light">
+    <!-- Logo -->
+    <img class="img" src="../images/logo_png_nuevo2.png" alt="Logo de Cabeza Games">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noticias.html">Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobremi.html">Sobre mi</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="videos.html">Videos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item dropdown">
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../index.html">Home</a>
+            <a class="dropdown-item" href="noticias.html">Noticias</a>
+            <a class="dropdown-item" href="sobremi.html">Sobre mi</a>
+            <a class="dropdown-item" href="videos.html">Videos</a>
+            <a class="dropdown-item" href="contacto.html">Contacto</a>
+          </div>
+        </li>
+      </ul>
     </div>
+  </nav>
 
 
+  <div class="videos">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/_IzY5nQ0p4w" title="Así fue el evento de ZONE y Cines Movie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/z65AlEUxfrc" title="Probamos de todo! | Argentina #1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/5lVjuozdTMA" title="Un año más acompañado este eventazo de @floridajuventud como siempre acompañado por @audvesports." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/bGgOtyrmD4k" title="RETO a un SOLDADO a subir el CERRO PAN DE AZUCAR!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
 </body>
 <footer>
     <div class="social-icons">

@@ -24,6 +24,7 @@ img.bg {
 
 body {
   margin: 0;
+  background: inherit;
 }
 
 /* Asegurarse de que el navbar y sus elementos ocupen todo el ancho */
@@ -31,6 +32,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  background: inherit;
 }
 
 .navbar-nav {
@@ -249,12 +251,7 @@ div.desc {
 }
 
 /* Estilos sobre contactos */
-div.contacto {
-  align-items: center;
-  display: flex;
-  justify-items: auto;
-  height: px;
-}
+
 
 
 /* Botones de redes sociales flotantes*/
@@ -301,4 +298,41 @@ div.contacto {
       height: 50px;
   }
 
+}
+
+/* Estilos para la pestania videos*/
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px; /* Espacio entre videos */
+  padding: 16px; /* Espacio alrededor de los videos */
+}
+
+.video-container {
+  flex: 1 1 calc(25% - 32px); /* Cuatro videos por fila con espacio */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+      flex: 1 1 calc(50% - 32px); /* Dos videos por fila en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .video-container {
+      flex: 1 1 calc(100% - 32px); /* Un video por fila en pantallas muy pequeñas */
+  }
 }
