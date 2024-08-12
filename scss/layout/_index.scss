@@ -1,0 +1,44 @@
+/* Galeria index.php*/
+.index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Espacio entre los elementos */
+    justify-content: center;
+    /* Centra el contenido */
+  }
+  
+  .gallery {
+    flex: 1 1 calc(50% - 20px);
+    /* Dos elementos por fila */
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+    img {
+        width: 100%;
+        height: auto;
+      }
+  }
+  
+  .desc {
+    margin-top: 10px;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .gallery {
+      flex: 1 1 calc(50% - 20px);
+      /* Dos elementos por fila */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  /* Media query para pantallas aún más pequeñas */
+  @media (max-width: 480px) {
+    .gallery {
+      flex: 1 1 100%;
+      /* Un elemento por fila */
+      max-width: 100%;
+    }
+  }

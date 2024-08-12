@@ -68,18 +68,23 @@
   <img class="titulo" src="../images/Title.png" alt="Título Cabeza Games">
 
     <!-- Sección de Contacto -->
-    <div class="contacto">
-        <div class="redes">
-            <img class="red" src="../images/red facebook.png" alt="Facebook">
-            <img class="red" src="../images/red instagram.png" alt="Instagram">
-            <img class="red" src="../images/ref discord.png" alt="Discord">
-            <img class="red" src="../images/red x.png" alt="x">
-            <img class="red"src="../images/red youtube.png" alt="Youtube">
-        </div>
-        <div class="premio">
-            <img src="../images/premio.png" alt="Premio">
-        </div>
-    </div>
+    <div class="contact">
+      <form action="mailto:tuemail@example.com" method="post" enctype="text/plain">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Asunto:</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+      </form>
+  </div>
 </body>
 
 <!-- Footer con iconos sociales -->

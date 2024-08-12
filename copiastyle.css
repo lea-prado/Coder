@@ -1,6 +1,5 @@
-@charset "UTF-8";
 html {
-  background: url(images/fondo2.jpg) no-repeat center center fixed;
+  background: url(images/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,9 +11,11 @@ img.bg {
   /* Llenar el fondo*/
   min-height: 100%;
   min-width: 1024px;
+
   /* Escala responsive */
   width: 100%;
   height: auto;
+
   /* Posicionamiento */
   position: fixed;
   top: 0;
@@ -36,20 +37,13 @@ body {
 
 .navbar-nav {
   width: 100%;
-  justify-content: center;
-  /* Centra los elementos del navbar horizontalmente */
+  justify-content: center; /* Centra los elementos del navbar horizontalmente */
 }
+
 .navbar-nav .nav-item {
   margin-left: auto;
   margin-right: auto;
 }
-
-.nav-item {
-  display: flex !important;
-  justify-content: center !important;
-  justify-content: space-between !important;
-}
-
 /*contenedor de links*/
 .contenedor {
   display: flex;
@@ -60,9 +54,17 @@ body {
   background-color: url("images/background.jpg");
   padding: 10px 0;
   /* Añade un espacio alrededor de los elementos */
+
 }
+
+.nav-item {
+  display: flex !important;
+  justify-content: center !important;
+  justify-content: space-between !important;
+}
+
 .contenedor a {
-  padding: 0.5em 0.8em;
+  padding: .5em .8em;
   color: rgba(4, 0, 0, 0.5);
   position: relative;
   justify-content: center;
@@ -70,45 +72,60 @@ body {
   text-decoration: none;
   font-size: 100%;
   text-transform: uppercase;
+
 }
+
+/*Efectos en las esquinas*/
 .contenedor a::before,
 .contenedor a::after {
-  content: "";
+  content: '';
   height: 15%;
   width: 15%;
   position: absolute;
-  transition: all 0.35s ease;
+  transition: all .35s ease;
   opacity: 0;
 }
+
 .contenedor a::before {
-  content: "";
+  content: '';
   right: 0;
   top: 0;
   border-top: 3px solid #d901ff;
   border-right: 3px solid #d901ff;
   transform: translate(-100%, 50%);
 }
+
 .contenedor a:after {
-  content: "";
+  content: '';
   left: 0;
   bottom: 0;
   border-bottom: 3px solid #d901ff;
   border-left: 3px solid #d901ff;
-  transform: translate(100%, -50%);
+  transform: translate(100%, -50%)
 }
+
 .contenedor a:hover:before,
 .contenedor a:hover:after {
   transform: translate(0, 0);
   opacity: 1;
 }
+
+/* Cambio de color cuando pongo el mouse */
 .contenedor a:hover {
   color: #6e3da3;
 }
 
+/*Ajustes imagen logo */
 img {
   width: 5%;
   height: 5%;
   position: relative;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+  width: 60%;
+  margin: auto;
 }
 
 /*Titulo tamanio*/
@@ -127,13 +144,14 @@ img.titulo {
 }
 
 .gallery {
-  flex: 1 1 calc(50% - 20px);
-  /* Dos elementos por fila */
-  max-width: calc(50% - 20px);
+  flex: 1 1 calc(33.333% - 20px);
+  /* Tres elementos por fila */
+  max-width: calc(33.333% - 20px);
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 20px;
 }
+
 .gallery img {
   width: 100%;
   height: auto;
@@ -151,6 +169,7 @@ img.titulo {
     max-width: calc(50% - 20px);
   }
 }
+
 /* Media query para pantallas aún más pequeñas */
 @media (max-width: 480px) {
   .gallery {
@@ -159,61 +178,7 @@ img.titulo {
     max-width: 100%;
   }
 }
-/* Botones de redes sociales flotantes*/
-.social-icons {
-  position: fixed;
-  right: 20px;
-  /* Ajusta según sea necesario */
-  bottom: 20px;
-  /* Ajusta según sea necesario */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  /* Espacio entre los iconos */
-}
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  /* Tamaño de icono más grande */
-  height: 60px;
-  /* Tamaño de icono más grande */
-  border-radius: 50%;
-  /* Hace que los botones sean redondos */
-  background-color: transparent;
-  /* Fondo transparente */
-  box-shadow: none;
-  /* Sin sombra */
-  transition: transform 0.3s ease;
-  /* Transición suave para efectos de hover */
-}
-.social-icons a img {
-  width: 100%;
-  /* Asegura que la imagen llene el contenedor */
-  height: 100%;
-  /* Asegura que la imagen llene el contenedor */
-  border-radius: 50%;
-  /* Redondea las imágenes */
-}
-.social-icons a:hover {
-  transform: scale(1.1);
-  /* Aumenta el tamaño al pasar el cursor */
-}
 
-/* Estilos responsive */
-@media (max-width: 600px) {
-  .social-icons {
-    right: 10px;
-    /* Reduce el margen en pantallas pequeñas */
-    bottom: 10px;
-  }
-  .social-icons a {
-    width: 50px;
-    /* Tamaño de icono más pequeño en pantallas pequeñas */
-    height: 50px;
-  }
-}
 /*Estilo para las imagenes de la galeria seccion Noticias*/
 div.gallery {
   margin: 5px;
@@ -221,13 +186,14 @@ div.gallery {
   float: left;
   width: 180px;
 }
-div.gallery img {
-  width: 100%;
-  height: 90;
-}
 
 div.gallery:hover {
   border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 90;
 }
 
 div.desc {
@@ -240,7 +206,7 @@ div.desc {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: -30px;
+  height: calc(50 - 80px);
   padding: 20px;
 }
 
@@ -254,6 +220,7 @@ div.desc {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
+
 .content img {
   width: 100%;
 }
@@ -270,10 +237,12 @@ div.desc {
   width: 80%;
   max-width: 500px;
 }
+
 .text-overlay p {
   margin: 0;
   line-height: 1.5em;
 }
+
 .text-overlay a {
   display: block;
   margin-top: 10px;
@@ -281,25 +250,72 @@ div.desc {
   text-decoration: none;
 }
 
+/* Estilos sobre contactos */
+
+
+
+/* Botones de redes sociales flotantes*/
+.social-icons {
+  position: fixed;
+  right: 20px; /* Ajusta según sea necesario */
+  bottom: 20px; /* Ajusta según sea necesario */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los iconos */
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Tamaño de icono más grande */
+  height: 60px; /* Tamaño de icono más grande */
+  border-radius: 50%; /* Hace que los botones sean redondos */
+  background-color: transparent; /* Fondo transparente */
+  box-shadow: none; /* Sin sombra */
+  transition: transform 0.3s ease; /* Transición suave para efectos de hover */
+}
+
+.social-icons a img {
+  width: 100%; /* Asegura que la imagen llene el contenedor */
+  height: 100%; /* Asegura que la imagen llene el contenedor */
+  border-radius: 50%; /* Redondea las imágenes */
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+/* Estilos responsive */
+@media (max-width: 600px) {
+  .social-icons {
+      right: 10px; /* Reduce el margen en pantallas pequeñas */
+      bottom: 10px;
+  }
+
+  .social-icons a {
+      width: 50px; /* Tamaño de icono más pequeño en pantallas pequeñas */
+      height: 50px;
+  }
+
+}
+
 /* Estilos para la pestania videos*/
 .videos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
-  /* Espacio entre videos */
-  padding: 16px;
-  /* Espacio alrededor de los videos */
+  gap: 16px; /* Espacio entre videos */
+  padding: 16px; /* Espacio alrededor de los videos */
 }
 
 .video-container {
-  flex: 1 1 calc(25% - 32px);
-  /* Cuatro videos por fila con espacio */
+  flex: 1 1 calc(25% - 32px); /* Cuatro videos por fila con espacio */
   position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
 }
+
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -311,113 +327,12 @@ div.desc {
 
 @media (max-width: 768px) {
   .video-container {
-    flex: 1 1 calc(50% - 32px);
-    /* Dos videos por fila en pantallas más pequeñas */
+      flex: 1 1 calc(50% - 32px); /* Dos videos por fila en pantallas más pequeñas */
   }
 }
+
 @media (max-width: 576px) {
   .video-container {
-    flex: 1 1 calc(100% - 32px);
-    /* Un video por fila en pantallas muy pequeñas */
+      flex: 1 1 calc(100% - 32px); /* Un video por fila en pantallas muy pequeñas */
   }
 }
-/*Estilo de imagen y texto seccion sobre mi*/
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: -30px;
-  padding: 20px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-.content img {
-  width: 100%;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 500px;
-}
-.text-overlay p {
-  margin: 0;
-  line-height: 1.5em;
-}
-.text-overlay a {
-  display: block;
-  margin-top: 10px;
-  color: #3d93d3;
-  text-decoration: none;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
-.contact {
-  width: 50%;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-h2 {
-  text-align: center;
-  color: #333;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin: 10px 0 5px;
-  color: #333;
-}
-
-input, textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px;
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #4cae4c;
-}
-
-/*# sourceMappingURL=style.css.map */

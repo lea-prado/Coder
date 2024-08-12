@@ -1,0 +1,128 @@
+html {
+    background: url(images/fondo2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*imagen de fondo*/
+img.bg {
+    /* Llenar el fondo*/
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Escala responsive */
+    width: 100%;
+    height: auto;
+
+    /* Posicionamiento */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body {
+    margin: 0;
+    background: inherit;
+}
+
+/* Asegurarse de que el navbar y sus elementos ocupen todo el ancho */
+.navbar {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: inherit;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: center;
+
+    /* Centra los elementos del navbar horizontalmente */
+    .nav-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nav-item {
+    display: flex !important;
+    justify-content: center !important;
+    justify-content: space-between !important;
+}
+
+/*contenedor de links*/
+.contenedor {
+    display: flex;
+    width: 100% !important;
+    /* Ocupa todo el ancho de la página */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    background-color: url("images/background.jpg");
+    padding: 10px 0;
+
+    /* Añade un espacio alrededor de los elementos */
+    a {
+        padding: .5em .8em;
+        color: rgba(4, 0, 0, 0.5);
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 100%;
+        text-transform: uppercase;
+
+    }
+
+    a::before,
+    a::after {
+        content: '';
+        height: 15%;
+        width: 15%;
+        position: absolute;
+        transition: all .35s ease;
+        opacity: 0;
+    }
+
+    a::before {
+        content: '';
+        right: 0;
+        top: 0;
+        border-top: 3px solid #d901ff;
+        border-right: 3px solid #d901ff;
+        transform: translate(-100%, 50%);
+    }
+
+    a:after {
+        content: '';
+        left: 0;
+        bottom: 0;
+        border-bottom: 3px solid #d901ff;
+        border-left: 3px solid #d901ff;
+        transform: translate(100%, -50%)
+    }
+
+    a:hover:before,
+    a:hover:after {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    a:hover {
+        color: #6e3da3;
+    }
+
+
+}
+
+img {
+    width: 5%;
+    height: 5%;
+    position: relative;
+}
+/*Titulo tamanio*/
+img.titulo {
+    width: 100%;
+  }
+  
